@@ -1,0 +1,178 @@
+
+body {
+
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background: linear-gradient(#0164270c, #0b9c06d0 50%, #fff 50%, #fff 100%);
+ 
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 380px;
+  background: #000;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+ 
+}
+
+.card:hover {
+  width: 600px;
+
+}
+
+.card .img-box {
+  position: relative;
+  min-width: 300px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2;
+
+}
+
+.card .img-box img {
+  max-width: 250px;
+  transition: 0.5s ease-in-out;
+
+}
+
+.card:hover .img-box img {
+  transform: rotate(-35deg) translateX(-20px);
+}
+
+.card .detalhes {
+  position: absolute;
+  left: 0;
+  min-width: 300px;
+  height: 100%;
+  background: linear-gradient( #69cc66, #1cb616);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  flex-direction: column;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover .detalhes {
+  left: 300px;
+}
+
+.card .detalhes::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fff;
+}
+
+.card .detalhes h3 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1em;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.card .detalhes h3 span {
+  font-size: 0.65em;
+  font-weight: 300;
+  text-transform: none;
+  opacity: 0.85;
+}
+
+.card .detalhes h4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1em;
+}
+
+.card .detalhes p {
+  color: #fff;
+  opacity: 0.85;
+  font-size: 0.8em;
+}
+
+.card .detalhes .tamanhos {
+  display: flex;
+  gap: 10px;
+}
+
+.card .detalhes .tamanhos li {
+  list-style: none;
+  color: #fff;
+  font-size: 0.9em;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  opacity: 0.65;
+  cursor: pointer;
+}
+
+.card .detalhes .tamanhos li:hover {
+  color: #050505;
+  background: #fff;
+  opacity: 1;
+}
+
+.card .detalhes .grupo{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.card .detalhes .grupo h2 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.card .detalhes .grupo h2 sup {
+  font-weight: 300;
+}
+
+.card .detalhes .grupo h2 small {
+  font-size: 0.75em;
+}
+
+.card .detalhes .grupo a {
+  display: inline-flex;
+  padding: 10px 25px;
+  background: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #e6280f;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+}
+
+.card .detalhes .grupo a:hover {
+  color: #ffffff;
+  background-color: #fc0606;
+}
